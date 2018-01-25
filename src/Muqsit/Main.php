@@ -46,7 +46,10 @@ class Main extends PluginBase implements Listener{
 	 * @param int $amplifier
 	 */
 	public static function giveEffect(Player $player, $id, $duration, $amplifier){
-		$effect = Effect::getEffect($id)->setDuration($duration)->setAmplifier($amplifier); # Fluent setters <3
+		$effect = Effect::getEffect($id);
+                $effect->setDuration($duration);
+                $effwct->setAmplifier($amplifier);
+		
 		$player->addEffect($effect);
 	}
 }
